@@ -6,8 +6,8 @@ module.exports = {
       swSrc: 'public/service-worker.js',
     },
     manifestOptions: {
-      name: 'PWA Demo Employees',
-      short_name: 'PWA Demo',
+      name: 'PWA Projekt',
+      short_name: 'PWA Projekt',
       theme_color: '#5e00ff',
       background_color: '#a16aff',
       icons: [
