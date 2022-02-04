@@ -24,9 +24,9 @@ const routes = [
     component: () => import('../views/Galerie.vue'),
   },
   {
-    path: '/bildmittext',
+    path: '/bildmittext/:id',
     name: 'BildText',
-    // props: true,
+    props: true,
     component: () => import('../views/BildmitText.vue'),
   },
 ];

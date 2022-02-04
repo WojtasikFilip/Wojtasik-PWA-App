@@ -7,17 +7,31 @@
       <v-spacer></v-spacer>
     </v-app-bar>
     <v-main>
-      <router-view />
+      <router-view :mitschriften="mitschriften" />
     </v-main>
   </v-app>
 </template>
 
 <script>
+import axios from 'axios';
 export default {
   name: 'App',
-
+  created() {
+    this.fetchMitschriften();
+  },
   data: () => ({
-    //
+    mitschriften: [],
+    serverAddress: process.env.VUE_APP_SERVER,
   }),
+
+  methods: {
+    async fetchMitschriften() {
+      let { data } = await axios({
+        url: this.serverAddress + '/mitschriften',
+        method: 'GET',
+      });
+      this.mitschriften = data;
+    },
+  },
 };
 </script>
