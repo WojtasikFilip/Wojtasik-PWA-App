@@ -1,2 +1,0 @@
-(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d0b37ec"],{"292a":function(t,e,n){"use strict";n.r(e);var a=function(){var t=this,e=t.$createElement,n=t._self._c||e;return n("div",{staticClass:"text-center"},[n("h2",[t._v("Hier ist die ausgewählte Mitschrift mit dem Text dazu:")]),n("v-btn",{attrs:{to:"/galerie"}},[t._v("Back")])],1)},c=[],i={},s=i,r=n("2877"),u=n("6544"),l=n.n(u),d=n("8336"),o=Object(r["a"])(s,a,c,!1,null,"359cc466",null);e["default"]=o.exports;l()(o,{VBtn:d["a"]})}}]);
-//# sourceMappingURL=chunk-2d0b37ec.bb0bfd2a.js.map
