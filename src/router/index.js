@@ -22,6 +22,11 @@ const routes = [
     component: () => import('../views/Galerie.vue'),
   },
   {
+    path: '/camera',
+    name: 'Camera',
+    component: () => import('../components/camera.vue'),
+  },
+  {
     path: '/bildmittext/:id',
     name: 'BildText',
     props: true,
