@@ -1,7 +1,7 @@
 <template>
   <div class="text-center">
     <h1>Fotografieren Sie hier die Tafel ab</h1>
-    <v-btn to="/" outlined class="ma-5">Harooneee</v-btn>
+    <v-btn to="/" outlined class="ma-5">Home</v-btn>
     <br />
 
     <v-btn x-large outlined to="/camera"><v-icon color="green">mdi-camera-plus</v-icon></v-btn>
