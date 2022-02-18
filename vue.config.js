@@ -8,8 +8,8 @@ module.exports = {
       swSrc: 'public/service-worker.js',
     },
     manifestOptions: {
-      name: 'PWA Projekt',
-      short_name: 'PWA Projekt',
+      name: 'virtual Data',
+      short_name: 'vData',
       theme_color: '#5e00ff',
       background_color: '#a16aff',
       icons: [
