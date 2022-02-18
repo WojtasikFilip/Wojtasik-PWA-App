@@ -5,8 +5,8 @@
     <v-container class="d-flex flex-wrap justify-center">
       <div v-for="m of mitschriften" :key="m.id">
         <img :src="m.img" alt="Bild der Mitschrift" width="400" />
-        <v-btn :to="`/bildmittext/${m.id}`">Dahin</v-btn>
         <h4>Mitschrift vom {{ m.date }}</h4>
+        <v-btn icon class="blue--text" :to="`/bildmittext/${m.id}`"> Ansehen</v-btn>
       </div>
     </v-container>
   </div>
@@ -22,6 +22,7 @@ export default {
       type: String,
     },
   },
+  methods: {},
   created() {
     console.log(this.mitschriften);
   },

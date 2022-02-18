@@ -1,6 +1,6 @@
 {
-  "name": "PWA Projekt",
-  "short_name": "PWA Projekt",
+  "name": "virtual Data",
+  "short_name": "vData",
   "theme_color": "#5e00ff",
   "icons": [
     { "src": "./img/icons/android-chrome-512x512.png", "sizes": "512x512", "type": "image/png" },
