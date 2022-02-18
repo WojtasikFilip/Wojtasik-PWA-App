@@ -22,7 +22,6 @@ export default {
       type: String,
     },
   },
-  methods: {},
   created() {
     console.log(this.mitschriften);
   },

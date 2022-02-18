@@ -3,7 +3,6 @@
     <v-app-bar dense dark app>
       <img src="../public/img/icons/android-chrome-192x192.png" width="40" class="mr-3" />
       <v-toolbar-title class="font-weight-bold">vData</v-toolbar-title>
-
       <v-spacer></v-spacer>
     </v-app-bar>
     <v-main>
@@ -18,16 +17,16 @@ export default {
   name: 'App',
   created() {
     this.fetchMitschriften();
+    console.log(this.mitschriften);
   },
   data: () => ({
     mitschriften: [],
-    serverAddress: process.env.VUE_APP_SERVER,
   }),
 
   methods: {
     async fetchMitschriften() {
-      let { data } = await axios({
-        url: this.serverAddress + '/mitschriften',
+      const { data } = await axios({
+        url: 'http://127.0.0.1:3000/mitschriften',
         method: 'GET',
       });
       this.mitschriften = data;
