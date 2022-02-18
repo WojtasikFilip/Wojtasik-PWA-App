@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-easy-camera @close="closeCamera()"> </v-easy-camera>
+    <v-easy-camera @close="closeCamera()" style="transform: scaleX(-1)"> </v-easy-camera>
   </div>
 </template>
 
