@@ -13,15 +13,22 @@
 
 <script>
 import axios from 'axios';
+import { openDB } from 'idb';
 export default {
   name: 'App',
-  created() {
-    this.fetchMitschriften();
-    console.log(this.mitschriften);
-  },
   data: () => ({
     mitschriften: [],
+    storedMitschriften: [],
+    db: null,
+    id: '',
   }),
+
+  async created() {
+    await this.fetchMitschriften();
+    await this.openDB();
+    await this.getStoredMitschriften();
+    console.log(this.storedMitschriften);
+  },
 
   methods: {
     async fetchMitschriften() {
@@ -30,6 +37,23 @@ export default {
         method: 'GET',
       });
       this.mitschriften = data;
+    },
+    async openDB() {
+      this.db = await openDB('mitschriftenDB', 1, {
+        upgrade(db) {
+          db.createObjectStore('mitschriften', { keyPath: 'id' });
+        },
+      });
+    },
+    async getStoredMitschriften() {
+      this.storedMitschriften = await this.db.getAll('mitschriften');
+      for (const m of this.mitschriften) {
+        await this.db.put('mitschriften', m);
+      }
+    },
+    async removeMitschrift(id) {
+      await this.db.delete('mitschriften', id);
+      this.getStoredMitschriften();
     },
   },
 };
