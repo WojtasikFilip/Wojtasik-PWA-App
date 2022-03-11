@@ -3,7 +3,6 @@
     <h2>Hier ist die ausgewählte Mitschrift vom {{ mitschriftÄndern.map((el) => el.date).toString() }}:</h2>
     <img :src="mitschriftÄndern.map((el) => el.img)" width="400" alt="Bild der Mitschrift" />
     <br />
-    <h2>Umgewandelter Text dazu:</h2>
     <v-btn to="/galerie" outlined>Back</v-btn>
   </div>
 </template>
