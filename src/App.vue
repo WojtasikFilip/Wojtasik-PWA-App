@@ -2,7 +2,7 @@
   <v-app>
     <v-app-bar dense dark app>
       <img src="../public/img/icons/android-chrome-192x192.png" width="40" class="mr-3" />
-      <v-toolbar-title class="font-weight-bold">vData</v-toolbar-title>
+      <v-toolbar-title class="font-weight-bold">vDataa</v-toolbar-title>
       <v-spacer></v-spacer>
     </v-app-bar>
     <v-main>
